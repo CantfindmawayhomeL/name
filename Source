@@ -1,0 +1,117 @@
+if not isfile("KavoConfig.JSON") then writefile("KavoConfig.JSON","{}")
+
+end
+
+local function GetURL(scripturl)
+
+  return game:HttpGet("https://raw.githubusercontent.com/BOYLABOAKO/SyctronicX4ROBLOX/main/"..scripturl, true)
+
+end
+
+local kavo = loadstring(GetURL("Libraries/kavo.lua"))()
+
+local window = kavo.CreateLib("Bape V1", "Ocean")
+
+local Combat = window:NewTab("Combat")
+
+local Blatant = window:NewTab("Blatant")
+
+local Render = window:NewTab("Render")
+
+local Utility = window:NewTab("Utility")
+
+local World = window:NewTab("World")
+
+local CombatS = Combat:NewSection("General")
+
+local BlatantS = Blatant:NewSection("General")
+
+local RenderS = Render:NewSection("General")
+
+local UtilityS = Utility:NewSection("General")
+
+local WorldS = World:NewSection("General")
+
+CombatS:NewToggle("Autoclick", "Hold attack button/screen to automatically click", function(callback)
+
+  if callback then
+
+      print("Toggle On")
+
+  else
+
+      print("Toggle Off")
+
+  end
+
+end)
+
+CombatS:NewToggle("AimAssist", "Smoothly aims to closest valid target with sword", function(callback)
+
+  if callback then
+
+      print("Toggle On")
+
+  else
+
+      print("Toggle Off")
+
+  end
+
+end)
+
+Combats:NewToggle("NoClickDelay", "Disables Bedwars's delay between attacks on swords", function(callback)
+
+  if callback then
+
+      print("Toggle On")
+
+  else
+
+      print("Toggle Off")
+
+  end
+
+end)
+
+CombatS:NewToggle("Reach", "Extends attack reach", function(callback)
+
+  if callback then
+
+      print("Toggle On")
+
+  else
+
+      print("Toggle Off")
+
+  end
+
+end)
+
+CombatS:NewToggle("Sprint", "Sets your sprinting to true.", function(callback)
+
+  if callback then
+
+      print("Toggle On")
+
+  else
+
+      print("Toggle Off")
+
+  end
+
+end)
+
+CombatS:NewToggle("Veloctiy", "Reduces knockback taken", function(callback)
+
+  if callback then
+
+      print("Toggle On")
+
+  else
+
+      print("Toggle Off")
+
+  end
+
+end)
